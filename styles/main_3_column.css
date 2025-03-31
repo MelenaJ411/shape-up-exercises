@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 40px black;
+    
+}
+
+a {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: calc(225% + .10vw);
+}
+
+header{
+
+background: linear-gradient(to bottom, white, lightsteelblue);
+border : 1px solid steelblue;
+padding: 2.5em;
+
+    & h1 {
+        color: steelblue;
+        font-style: italic;
+    }
+
+    & h2 {
+        font-size: calc(150% + .25vw);
+    }
+
+    & h3 {
+        font-size: calc(120% + .25vw);
+    }
+
+    & img {
+        float: left;
+        padding: 0em 0em .25em 0em;
+        margin-top: 0px;
+        max-width: 120px;
+        min-width: 100px;
+        width: 100%;
+        height: auto;
+        
+    }
+
+
+}
+
+
+section {
+    order: 2;
+    flex-basis: 75%;
+    margin : 1em;
+    margin-top: 0em;
+
+    a {
+        color: maroon
+    }
+
+    a:visited {
+        color: maroon;
+    }
+
+    a:hover {
+        color: steelblue;
+    }
+
+    a:focus {
+        color: steelblue;
+    }
+
+
+}
+
+aside {
+    
+    flex-basis: 25%;
+    border: 2px solid steelblue;
+    border-radius: 10px;
+    padding: 1em;
+    margin: 1em;
+    max-height: fit-content;
+    min-width: 300px;
+
+   & h3 {
+        color: maroon;
+        
+    }
+
+    & ul {
+        line-height: 1.5;
+        margin-left: 1em;
+    }
+
+    & a {
+        color: steelblue;
+    }
+
+    & a:visited {
+        color: steelblue;
+    }
+
+    & a:hover {
+        color: maroon;
+    }
+
+    & a:focus {
+        color: maroon;
+    }
+}
+
+footer {
+    font-size : calc(80% + .25vw);
+    text-align: center;
+    background-color: steelblue;
+    color: white;
+    padding-top: 15px;
+}
+
+/* Reset selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    clear:both;
+    padding: 1em;
+
+    & p {
+
+        padding-bottom: .5em;
+    }
+
+    & h2 {
+        padding: 1em 0 .5em 0em;
+    }
+
+    & h3 {
+        padding:.5em 0 .5em 0em;
+    }
+
+    & blockquote {
+        padding: .25em 1.5em;
+        
+        
+    }
+}
+
+aside:first-of-type {
+    order: 1;
+}
+aside:last-of-type {
+    order: 3;
+
+    & h2{
+        color: maroon;
+    }
+
+    & h3 {
+        color: black;
+    }
+}
+
+
+
+
+
+
+
