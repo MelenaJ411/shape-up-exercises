@@ -150,6 +150,92 @@ main {
     }
 }
 
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+	
+	& li {
+		flex-basis: 20%;
+		text-align: center;
+	}
+	
+}
+
+:root {
+	--menu-light-color: #ffffff;
+	--menu-mid-color: #faebd7;
+	--menu-dark-color: #000000;
+}
+
+.navbar {
+
+	background-color: steelblue;
+
+	& a {
+
+		display: block;
+		margin : 0 1px 2px;
+		padding: 1em;
+		text-decoration: none;
+		color: var(--menu-light-color);
+
+	}
+
+	& a:hover, & a:focus {
+		text-decoration: underline;
+		
+	}
+
+	& ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+}
+
+.menu li:has(.submenu) {
+	position: relative;
+	& small {
+		margin-left: 0.5em;
+	}
+	&:first-child a {
+		margin-left: 0;
+	}
+
+	&:last-child a {
+		margin-right: 0;
+	}
+
+	& .submenu > li a {
+		margin: 0 2px 2px;
+	}
+	& .submenu {
+		
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right : 0;
+		background-color: steelblue;
+		
+        
+	}
+
+	&:hover > .submenu {
+		display: block;
+	}
+}
+.menu li .submenu > li {
+    text-align: initial;
+}
+
+a.current {
+    
+    border: 2px solid white;
+    border-radius: 100px;
+}
+
 
 
 
