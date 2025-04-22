@@ -127,6 +127,7 @@ footer {
 
 main {
     display: flex;
+    flex-direction: column;
     clear:both;
     padding: 1em;
 
@@ -151,8 +152,12 @@ main {
 }
 
 .menu {
-	display: flex;
-	flex-wrap: wrap;
+    position: absolute;
+    left: 0;
+    background-color: steelblue;
+    display: none;
+	
+	
 	
 	& li {
 		flex-basis: 20%;
@@ -161,10 +166,167 @@ main {
 	
 }
 
+input[type="checkbox"] {
+	display: none;
+}
+
+input[type="checkbox"]:checked ~ .menu {
+	display: block;
+}
+
+input[type="checkbox"]:checked + .menu-btn::before {
+	content: "✖";
+}
+
+.menu-btn {
+	
+	
+	display: block;
+	background-color: var(--accent-color);
+	color: var(--light_menu);
+	border: none;
+	padding: 0.5em 1em;
+	font-size: 1.2em;
+	cursor: pointer;
+	&::before {
+		content: "☰";
+		margin-right: 0.5em;
+        color: white;
+	}
+}
+
+
 :root {
 	--menu-light-color: #ffffff;
 	--menu-mid-color: #faebd7;
 	--menu-dark-color: #000000;
+}
+
+.navbar {
+    clear: left;
+    position: relative;
+
+	background-color: steelblue;
+
+	& a {
+
+		display: block;
+		margin : 0 1px 2px;
+		padding: 1em;
+		text-decoration: none;
+		color: var(--menu-light-color);
+
+	}
+
+	& a:hover, & a:focus {
+		text-decoration: underline;
+		
+	}
+
+	& ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+}
+
+.menu li:has(.submenu) {
+    & small::after { 
+        content: "▶";
+        position: relative;
+        color: white;
+        margin-left: .25em;
+    }
+	position: relative;
+	& small {
+		margin-left: 0.5em;
+	}
+	&:first-child a {
+		margin-left: 0;
+	}
+
+	&:last-child a {
+		margin-right: 0;
+	}
+
+	& .submenu > li a {
+		margin: 0 2px 2px;
+	}
+	& .submenu {
+		
+		display: none;
+		position: relative;
+		top: 100%;
+		left: 0;
+      
+		
+		background-color: steelblue;
+		
+        
+	}
+
+	&:hover > .submenu {
+		display: block;
+	}
+}
+.menu li .submenu > li {
+    text-align: initial;
+}
+
+a.current {
+    
+    border: 2px solid white;
+    border-radius: 100px;
+}
+.menu li:hover > .submenu {
+    display: block;
+    position: absolute;
+    left: 100%; 
+    top: 0; 
+
+    
+}
+
+
+
+
+
+@media (min-width: 559px) {
+
+    .menu-btn {
+        display: none;
+    }
+
+    main {
+        flex-direction: row;
+        clear:both;
+        padding: 1em;
+    }
+
+    .menu li:has(.submenu) {
+        & small::after { 
+            content: "▼";
+            position: relative;
+            color: white;
+            margin-left: .25em;
+        }
+
+    }
+    
+
+.menu {
+	display: flex;
+    position: relative;
+	flex-wrap: wrap;
+
+   
+	
+	& li {
+		flex-basis: 20%;
+		text-align: center;
+	}
+
 }
 
 .navbar {
@@ -194,48 +356,11 @@ main {
 
 }
 
-.menu li:has(.submenu) {
-	position: relative;
-	& small {
-		margin-left: 0.5em;
-	}
-	&:first-child a {
-		margin-left: 0;
-	}
-
-	&:last-child a {
-		margin-right: 0;
-	}
-
-	& .submenu > li a {
-		margin: 0 2px 2px;
-	}
-	& .submenu {
-		
-		display: none;
-		position: absolute;
-		top: 100%;
-		left: 0;
-		right : 0;
-		background-color: steelblue;
-		
-        
-	}
-
-	&:hover > .submenu {
-		display: block;
-	}
-}
-.menu li .submenu > li {
-    text-align: initial;
+input[type="checkbox"]:checked ~ .menu {
+    display: flex;
 }
 
-a.current {
-    
-    border: 2px solid white;
-    border-radius: 100px;
 }
-
 
 
 
