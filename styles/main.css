@@ -54,6 +54,16 @@ section {
     margin : 1em;
     margin-top: 0em;
 
+    & ul{
+        margin-left: 2em;
+
+    }
+
+    & h2 {
+        color: maroon;
+        
+    }
+
     a {
         color: maroon
     }
@@ -90,7 +100,8 @@ aside {
 
     & ul {
         line-height: 1.5;
-        margin-left: 1em;
+        
+        list-style-type: none;
     }
 
     & a {
@@ -312,6 +323,14 @@ a.current {
             margin-left: .25em;
         }
 
+    }
+
+    .menu li:hover > .submenu {
+        display: block;
+        position: absolute;
+        min-width: 100%;
+        left: 0;
+        top: 100%;
     }
     
 
