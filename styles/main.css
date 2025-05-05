@@ -7,6 +7,11 @@ body {
     
 }
 
+@font-face {
+    font-family: American Captain;
+    src: url("American Captain.ttf") format("truetype");
+}
+
 a {
     font-weight: bold;
 }
@@ -24,6 +29,8 @@ padding: 2.5em;
     & h1 {
         color: steelblue;
         font-style: italic;
+        font-family: American Captain;
+        src : url("fonts/American Captain.ttf");
     }
 
     & h2 {
