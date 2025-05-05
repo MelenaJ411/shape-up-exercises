@@ -83,6 +83,26 @@ section {
 
 }
 
+figure {
+    float: left;
+    width: 75%;
+    margin: 0 0.5em 0.5em 0;
+    border-bottom:3px solid steelblue;
+}
+
+figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+figure figcaption {
+    
+    
+    font-weight: bold;
+    
+}
+
 aside {
     
     flex-basis: 25%;
@@ -91,7 +111,7 @@ aside {
     padding: 1em;
     margin: 1em;
     max-height: fit-content;
-    min-width: 300px;
+    min-width: 270px;
 
    & h3 {
         color: maroon;
@@ -102,6 +122,10 @@ aside {
         line-height: 1.5;
         
         list-style-type: none;
+        
+        & img {
+            width: 20px;
+        }
     }
 
     & a {
