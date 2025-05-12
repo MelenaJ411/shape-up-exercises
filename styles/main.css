@@ -330,6 +330,114 @@ a.current {
     
 }
 
+form{
+    & label {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+   
+}
+
+radio {
+    display: flex;
+    margin: 0.5em 0;
+    & input {
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+    }
+    
+}
+
+input[type="checkbox"] {
+    display:flex;
+    
+    float : left;
+}
+
+
+
+legend {
+    font-weight: bold;
+    color: maroon;
+}
+
+div {
+    
+   float: left;
+   display: flex;
+   margin-left: 0.5em;
+    
+}
+
+.personal_info {
+    & input {
+        width:100%;
+    }
+
+    & select {
+        width:100%;
+    }
+
+   
+}
+
+.required::after {
+    content: "*";
+    color: red;
+
+}
+
+input:required:invalid, select:required:invalid{
+    border: 2px solid red;
+
+}
+
+
+
+
+input:required:valid, select:required:valid{
+    border: 2px solid green;
+}
+
+.btn {
+    width : 20%;
+    height : 3em;
+    color: white;
+    border-radius: 10px;
+    
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn-submit {
+    background-color: steelblue;
+}
+
+.btn-reset {
+    background-color: maroon;
+}
+
+.btn-reset:hover {
+    background-color: red;
+}
+
+.btn-submit:hover {
+    background-color: lightsteelblue;
+}
+
+
+
+
+
+
+textarea {
+    
+    width: 100%;
+}
+
 
 
 

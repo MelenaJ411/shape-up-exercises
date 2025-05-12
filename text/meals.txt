@@ -3,7 +3,7 @@ Meal plan order form
 Fill out the form as completely as possible and we will email you a weekly meal plan, customized
 for you--your lifestyle, your goals, and your personal needs.
 
-Asterisks (*) indicate required entries.
+
 
 Tell us about yourself
 
